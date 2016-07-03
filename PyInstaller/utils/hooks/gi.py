@@ -111,7 +111,7 @@ def gir_library_path_fix(path):
 
     path = os.path.abspath(path)
     common_path = os.path.commonprefix([base_prefix, path])
-    gir_path = os.path.join(common_path, 'share', 'gir-1.0')
+    gir_path = os.path.join(common_path, 'Lib', 'site-packages', 'gnome', 'share', 'gir-1.0')
 
     typelib_name = os.path.basename(path)
     gir_name = os.path.splitext(typelib_name)[0] + '.gir'
